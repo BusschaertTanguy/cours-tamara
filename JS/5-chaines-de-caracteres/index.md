@@ -89,3 +89,114 @@ let nombreEnChaine = nombre.toString();
 Jusqu'à maintenant, nous avons toujours vu des fonctions isolee. Certains types, comme les nombres ou les chaines, ont des fonctions definie sur eux meme.
 
 Dans notre exemple, le type 'Number' a donc une fonction 'toString()', qui renvoie le nombre en chaine de caracteres.
+
+## 5. Methodes utiles pour les chaines de characteres
+
+Une chaine de characteres est un object. Il contient donc :
+- Des proprietes: Des variable sur l'objet
+- Des methodes : Des function sur l'objet
+
+Les proprietes et methods d'un objet sont accessibles avec le `.`
+
+IMPORTANT : Les methodes ne changent pas la valeur de la chaine, elle renvoie une nouvelle chaine tout en gardant la premiere intact.
+
+### 5.1 Trouver la longeur d'une chaine
+
+Il existe donc une propriete pour trouver la longuer d'une chaine, `length`
+
+```js
+let nom = 'Tamara';
+let longuer = nom.length; // Contient le nombre 6
+```
+
+### 5.2 Trouver un charactere dans une chaine
+
+Il est possible de trouver un charactere dans une chaine à son endroit specifique, grace a la notation crochet.
+
+Il suffit donc d'ajouter des crochets derriere notre chaine, avec la position du charactere (commencant de 0).
+
+```js
+let nom = 'Tamara';
+let premiereLettre = nom[0]; // Contient 'T'
+let deuxiemeLettre = nom[1]; // Contient 'a'
+```
+
+Il est donc possible de combiner les crochets avec la propriete length pour trouver le dernier charactere
+
+```js
+let nom = 'Tanguy';
+let derniereLettre = nom[nom.length - 1] // Contient 'y'
+```
+
+On fait `length - 1` parce que length renvoie la taille à partir de 1, sauf que les crochets commencent à partir de 0.
+
+### 5.3 Trouver une sous-chaine et l'extraire
+
+Il est possible de regarder si une sous-chaine est presente dans une chaine de chars.
+
+Par exemple, nous voulons savoir si la chaine 'Tanguy' contient le mot 'guy'
+
+```js
+let nom = 'Tanguy';
+let sousChaine = nom.indexOf('guy'); // Retourne le nombre 3
+```
+
+La methode à utiliser est `indexOf`, avec comme parametre la sous-chaine.
+
+Le methode renvoie l'index (la position en debutant de 0) de la sous-chaine.
+
+Si aucune sous-chaine n'est trouvee, la methode renvoie le nombre -1.
+
+```js
+let nom = 'Tamara';
+let sousChaine = nom.indexOf('guy'); // Retourne le nombre -1
+```
+
+Maintenant que nous avons trouvé la position de la sous chaine, nous pouvons l'extraire dans une nouvelle variable avec la methode `slice`
+
+```js
+let nom = 'Tanguy';
+let index = nom.indexOf('guy'); // Retourne le nombre 3
+
+if(index !== -1) {
+    let sousChaine = nom.slice(index); // Retourne guy
+}
+```
+
+Le methode slice 'coupe' la chaine de charactere à partir d'un index (le premier parametre de la methode) et renvoie le resultat (la chaine apres la coupure)
+
+De base, la methode slice coupe tout le restant de la chaine apres l'index, il est possible de preciser combien de chars nous voulons couper en 2ᵉ parametre
+
+```js
+let nom = 'Tanguy';
+let index = nom.indexOf('guy'); // Retourne le nombre 3
+
+if(index !== -1) {
+    let sousChaine = nom.slice(index, 2); // Retourne gu
+}
+```
+
+Ici, nous avons donné un 2ᵉ parametre (2) à la methode, du coup, elle nous coupe que 2 chars du restant de la chaine.
+
+### 5.4 Changer la case
+
+Il est possible de changer la case d'une chaine, grace aux methodes `toLowerCase` et `toUpperCase`
+
+```js
+let nom = 'Tanguy';
+let lower = nom.toLowerCase(); // Contient 'tanguy'
+let upper = nom.toUpperCase(); // Contient 'TANGUY'
+```
+
+### 5.5 Remplacer la partie d'une chaine
+
+Il est possible de remplacer une partie d'une chaine par une autre.
+
+La methode `replace` prend 2 parametres:
+- La chaine a remplace
+- La chaine qui remplace
+
+```js
+let nom = 'Tanguy';
+let nouveauNom = nom.replace('guy', 'gay'); // Contient 'Tangay'
+```
