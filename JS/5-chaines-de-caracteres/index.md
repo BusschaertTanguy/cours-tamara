@@ -200,3 +200,5 @@ La methode `replace` prend 2 parametres:
 let nom = 'Tanguy';
 let nouveauNom = nom.replace('guy', 'gay'); // Contient 'Tangay'
 ```
+
+[Excercice string(1-methodes-string.js)](1-methodes-string.js)
