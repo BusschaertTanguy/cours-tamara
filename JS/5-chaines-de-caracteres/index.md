@@ -1,4 +1,4 @@
-♦
+# Chaines de characteres
 
 ## 1. Les bases
 
