@@ -110,7 +110,7 @@ Si nous voulons retirer un elements au debut, on utilise la methode `shift` (con
 
 ```js
 let fruits = ['Pomme', 'Poire', 'Orange'];
-let fruitEnlever = fruits.unshift(); // Elements: 'Poire', 'Orange'. Fruit enlever: 'Pomme'
+let fruitEnlever = fruits.shift(); // Elements: 'Poire', 'Orange'. Fruit enlever: 'Pomme'
 ```
 
 Il est possible d'enlever 1 ou plusieurs elements dans un array à partir d'une position, grace a la methode connu `splice`.
