@@ -160,6 +160,10 @@ for(let fruit of fruits) {
 }
 ```
 
+Voici un premier excercice sur les chaptires precedents : 
+
+[Excercices simple array(1-array-simple.js)](1-array-simple.js)
+
 ## 9. Manipulation avancees sur des array
 ### 9.1 Faire la meme manipulation sur chaque element
 
@@ -233,3 +237,7 @@ let fruitsEnString = fruitsEnArray.join(','); // 'Pomme,Poire,Orange';
 ```
 
 Le delimeteur peut etre n'importe quoi, une virgule, un point, un nombre, ...
+
+Voici un excercice pour la derniere partie du cours
+
+[Excercices avance array(1-array-simple.js)](2-array-avance.js)
