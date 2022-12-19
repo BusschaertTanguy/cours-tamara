@@ -240,4 +240,4 @@ Le delimeteur peut etre n'importe quoi, une virgule, un point, un nombre, ...
 
 Voici un excercice pour la derniere partie du cours
 
-[Excercices avance array(1-array-simple.js)](2-array-avance.js)
+[Excercices avance array(2-array-avance.js)](2-array-avance.js)
