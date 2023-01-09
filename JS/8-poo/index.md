@@ -72,7 +72,7 @@ class Personne
 	proprietees
 		nom
 	constructeur
-		Personne(nom, annee)
+		Personne(nom)
 	methodes
 		presenter() // Imprime 'Je suis {nom}'
 ```
