@@ -1,32 +1,4 @@
-// 1. Creer une class 'Animal' avec :
-// - les proprietees suivantes: nom, race, age
-// - un constructeur qui prend les parametres (nom, race, age), et les assigne aux bonnes proprietees
-// - une fonction 'bruit' qui imprime 'Je suis {nom} et je fais du bruit !' dans la console.
-class Animal {
-    nom;
-    race;
-    age;
-
-    constructor(nom, race, age) {
-        this.nom = nom;
-        this.race = race;
-        this.age = age;
-
-    }
-
-    bruit() {
-        console.log('Je suis' + this.nom + 'et je fais du bruit !')
-    }
-}
-
-// 2. Creer une class 'Chien' qui herite de 'Animal'. Le chien ne prend pas de proprietes en plus que l'animal,
-// mais nous voulons que la fonction 'bruit' soit ecrasee. La fonction bruit du chien doit imprimer 'Woof, je suis {nom} !'
-class Chien extends Animal {
-    bruit() {
-        console.log('Woof,je suis' + this.nom + '!')
-    }
-}
-
+import {Animal, Chien} from "./animal";
 
 // 3. Creer une class 'Chat' qui herite de 'Animal'. Le chat ne prend pas de proprietes en plus que l'animal,
 // mais nous voulons que la fonction 'bruit' soit ecrasee. La fonction bruit du chat doit imprimer 'Miaouw, je suis {nom} !'
@@ -64,3 +36,5 @@ let coccinelle = new Insecte('scoubidouuuuu','coco',1,false);
 
 scorpion.attaque();
 coccinelle.attaque();
+
+// 5. Exporter les classes dans un autre fichier
