@@ -121,7 +121,7 @@ class Professeur extends Personne {
     }
 
     evaluer(controle, points) {
-        console.log("Je donne un " + points + " pour le controle " + controle + ".");
+        console.log("Je donne un " + this.points + " pour le controle " + this.controle + ".");
     }
 }
 ```
